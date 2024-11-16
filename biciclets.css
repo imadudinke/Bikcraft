@@ -1,0 +1,191 @@
+.main--header {
+  padding: 4rem 8rem;
+  background-color: #111;
+  line-height: 1.2;
+}
+.main--header h2 {
+  font-size: 2.5rem;
+  color: #b5b5b5;
+  font-weight: 400;
+}
+.main--header h1 {
+  font-size: 6rem;
+  color: #fff;
+}
+
+section {
+  display: flex;
+  padding: 8rem;
+}
+section img {
+  position: relative;
+  height: 35rem;
+  object-fit: cover;
+}
+
+section .text--cont {
+  padding: 2rem 0 3rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.text--cont h1 {
+  position: relative;
+  font-size: 3rem;
+}
+.text--cont h1::before {
+  position: absolute;
+  content: " ";
+  left: 0;
+  top: -10px;
+  height: 5px;
+  width: 15px;
+  background-color: orange;
+}
+.text--cont h1::after {
+  position: absolute;
+  content: " R$ 4999";
+  font-size: 1.6rem;
+  width: 70px;
+  height: 40px;
+  color: #fff;
+  background-color: #0000;
+  left: -45%;
+  top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px 0 0 3px;
+  /* align */
+}
+.text--cont p {
+  color: #7b7a7a;
+  grid-column: span 2;
+  font-size: 1.67rem;
+  font-family: italic;
+  line-height: 1.2;
+}
+.text--cont ul {
+  grid-column: 1;
+  margin-left: 30px;
+}
+.text--cont li {
+  position: relative;
+  font-size: 1.8rem;
+}
+.text--cont ul li::before {
+  position: absolute;
+  content: " ";
+  width: 25px;
+  height: 25px;
+  left: -15%;
+  bottom: 25%;
+}
+.right__arow-btn {
+  position: relative;
+  color: #000;
+  margin: 9rem 0 0 2rem;
+  font-size: 1.7rem;
+  font-weight: 550;
+  background: linear-gradient(#ffbf00, #f2a50c);
+  padding: 1.9rem 7rem 1.9rem 4rem;
+  height: fit-content;
+  width: fit-content;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+.right__arow-btn::before {
+  position: absolute;
+  content: " ";
+  right: 10%;
+  top: 40%;
+  background: url(imgs/seta.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 10px;
+  transition: all 0.35s;
+}
+.right__arow-btn:hover {
+  background: linear-gradient(#b98b02, #dc9508);
+}
+.right__arow-btn:hover::before {
+  width: 20px;
+  /* opacity: 0; */
+}
+.text--cont ul :nth-child(1)::before {
+  background: url(imgs/eletrica.svg);
+}
+.text--cont ul :nth-child(2)::before {
+  background: url(imgs/carbono.svg);
+}
+.text--cont ul :nth-child(3)::before {
+  background: url(imgs/velocidade.svg);
+}
+.text--cont ul :nth-child(4)::before {
+  background: url(imgs/rastreador.svg);
+}
+
+.section--two {
+  background-color: #000;
+  box-shadow: inset 400px 0 0 white;
+}
+
+.section--two .text--cont h1 {
+  color: #fff;
+}
+
+.section--two ul {
+  color: #b5b5b5;
+}
+.section--two .text--cont h1::after,
+.section--three .text--cont h1::after {
+  content: "R$ 2499";
+  background-color: #000;
+  color: #fff;
+}
+.section--three .text--cont h1::after {
+  content: "R$ 3999";
+}
+
+@media (max-width: 1100px) {
+  section {
+    flex-direction: column;
+  }
+  section .text--cont {
+    padding-left: 0;
+  }
+  .text--cont {
+    grid-template-columns: 1fr;
+  }
+  .right__arow-btn {
+    grid-column: 1;
+    margin: 0;
+  }
+  .text--cont h1 {
+    text-wrap: nowrap;
+  }
+  .text--cont h1::after {
+    display: none;
+  }
+  .section--two {
+    box-shadow: 0 0 0 black;
+  }
+}
+
+@media (max-width: 815px) {
+  .main--header {
+    padding: 4rem 3rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .main--header h2 {
+    font-size: 1.5rem;
+  }
+  .main--header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 320px) {
+}
